@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, hic.</h1>
+    <button onclick="document.body.style.backgroundColor='red'">Make Red</button>
+    <button onclick="green()">Make Green</button>
+    <button id="makeBlue">Make Blue</button>
+    <button id="makeYellow">Make Yellow</button>
+    <button id="makeOrange">Make Orange</button>
+    <button id="makePurple">Make Purple</button>
+    <script>
+        function green(){
+            document.body.style.backgroundColor='green'
+        }
+
+        const blueBtn = document.getElementById('makeBlue')
+        blueBtn.onclick = function blue(){
+            document.body.style.backgroundColor = 'blue'
+        }
+
+        const yellowBtn = document.getElementById('makeYellow')
+        yellowBtn.addEventListener('click', yellow)
+        function yellow(){
+            document.body.style.backgroundColor = 'yellow'
+        }
+
+        const orangeBtn = document.getElementById('makeOrange')
+        orangeBtn.addEventListener('click', function orange(){
+            document.body.style.backgroundColor = 'orange'
+        })
+
+        document.getElementById('makePurple').addEventListener('click', function purplr(){
+            document.body.style.backgroundColor = 'purple'
+        })
+    </script>
+</body>
+</html>
